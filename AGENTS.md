@@ -16,3 +16,15 @@ Static web app "Diario de Estudio" — session tracker with study streak.
 
 ## Verify by hand
 - Open `index.html` in a browser; add sessions for today/yesterday and check the 🔥 counter and reload persistence.
+
+## Memoria
+- Al empezar, lee `MEMORY.md` para conocer el estado del proyecto y las decisiones
+tomadas.
+- Al terminar una tarea, actualízalo: estado actual, decisiones importantes (con su
+porqué) y errores a evitar.
+- Mantenlo breve (máximo ~50 líneas): resume o elimina lo que ya no aporte.
+- Si algo se convierte en una regla permanente, propón moverlo a `AGENTS.md` en lugar de
+dejarlo en la memoria.
+- No guardes nunca datos sensibles (claves, tokens, datos personales).
+
+Siempre: actualizar `MEMORY.md` al terminar cada tarea.
