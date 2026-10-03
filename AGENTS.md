@@ -2,6 +2,8 @@
 
 Static web app "Diario de Estudio" — session tracker with study streak.
 
+#t
+
 ## Rules that bite
 - No frameworks, no libraries, no build step, no package.json. Do not add npm/tooling.
 - Exactly three files: `index.html`, `styles.css`, `app.js`. New features go in these.
