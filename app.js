@@ -116,3 +116,21 @@ formulario.addEventListener("submit", (evento) => {
 });
 
 mostrar();
+
+// Modo oscuro: se guarda la preferencia en localStorage con otra clave.
+const CLAVE_TEMA = "diarioDeEstudioTema";
+const toggleTema = document.getElementById("toggleTema");
+
+function aplicarTema(oscuro) {
+  document.body.classList.toggle("oscuro", oscuro);
+  toggleTema.textContent = oscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+}
+
+let temaOscuro = localStorage.getItem(CLAVE_TEMA) === "oscuro";
+aplicarTema(temaOscuro);
+
+toggleTema.addEventListener("click", () => {
+  temaOscuro = !temaOscuro;
+  localStorage.setItem(CLAVE_TEMA, temaOscuro ? "oscuro" : "claro");
+  aplicarTema(temaOscuro);
+});

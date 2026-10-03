@@ -11,6 +11,47 @@ body {
   padding: 24px 16px;
 }
 
+body.oscuro {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+body.oscuro .contenedor {
+  background: #1f2937;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .formulario input {
+  background: #374151;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+body.oscuro .lista li {
+  background: #374151;
+}
+
+body.oscuro .lista .vacio {
+  background: none;
+  color: #9ca3af;
+}
+
+.toggle-tema {
+  display: block;
+  margin: 0 auto 16px;
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+body.oscuro .toggle-tema {
+  border-color: #4b5563;
+}
+
 .contenedor {
   max-width: 480px;
   margin: 0 auto;
