@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Diario de Estudio</h1>
+
+    <section class="racha">
+      <div class="racha-numero" id="rachaNumero">0</div>
+      <div class="racha-texto">🔥 <span id="rachaTexto">días de racha</span></div>
+    </section>
+
+    <form id="formulario" class="formulario">
+      <label>
+        Fecha
+        <input type="date" id="fecha" required />
+      </label>
+      <label>
+        Tema
+        <input type="text" id="tema" required placeholder="Ej. Matemáticas" />
+      </label>
+      <label>
+        Minutos
+        <input type="number" id="minutos" min="1" required placeholder="30" />
+      </label>
+      <button type="submit">Añadir sesión</button>
+    </form>
+
+    <section>
+      <h2>Sesiones</h2>
+      <ul id="listaSesiones" class="lista"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
