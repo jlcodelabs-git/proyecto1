@@ -22,4 +22,11 @@ aporte.
 - Se instaló la skill `frontend-design` (anthropics/skills) en `.agents/skills/` vía
   `npx skills add ... --skill frontend-design`.
 ## Próximos pasos
-- (vacío por ahora)
+- La app NO tiene "mejor racha" (probado 2026-10-05 con CDP): si se pide, hay que
+  implementarla (derivarla de las sesiones o guardarla en localStorage).
+## Notas de entorno
+- Chromium 154 vía snap usable headless (`--remote-debugging-port=9222`); CDP con
+  Node 22 en `/tmp/node-v22.17.0-linux-arm64/bin`. Probado OK 2026-10-05: racha 3,
+  consola limpia.
+- Scripts git en `~/.local/bin/` (`git-up`, `git-up.bat`): add+commit+push con mensaje
+  interactivo. Van fuera del proyecto: AGENTS.md fija exactamente 3 archivos.
