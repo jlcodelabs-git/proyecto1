@@ -13,7 +13,13 @@ aporte.
 - Sin backend ni dependencias: cualquiera debe poder abrirlo con doble clic.
 - Fecha editable en el formulario: permite registrar días pasados y ver la racha crecer.
 - Semana = lunes a hoy, total en minutos: convención española/ISO y coherente con `s.minutos`.
+- Rediseño (frontend-design): estética cuaderno de bitácora — Spectral, papel/tinta, sello
+  circular rojo como héroe de racha, campos subrayados. Tema claro/oscuro vía variables CSS
+  en `body` / `body.oscuro` (no reglas por elemento).
 ## Aprendizajes y errores a evitar
-- (vacío por ahora)
+- Node del sistema es v10 (apt, focal): `npx skills` falla con "Unexpected identifier". Usar
+  Node 22 descargado en `/tmp/node-v22.17.0-linux-arm64/bin` anteponiéndolo al PATH.
+- Se instaló la skill `frontend-design` (anthropics/skills) en `.agents/skills/` vía
+  `npx skills add ... --skill frontend-design`.
 ## Próximos pasos
 - (vacío por ahora)

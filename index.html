@@ -4,21 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diario de Estudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="contenedor">
-    <h1>Diario de Estudio</h1>
-    <button id="toggleTema" class="toggle-tema" type="button">🌙 Modo oscuro</button>
+  <main class="hoja">
+    <header class="cabecera">
+      <h1>Diario de Estudio</h1>
+      <button id="toggleTema" class="toggle-tema" type="button">Modo oscuro</button>
+    </header>
 
-    <section class="racha">
-      <div class="racha-numero" id="rachaNumero">0</div>
-      <div class="racha-texto">🔥 <span id="rachaTexto">días de racha</span></div>
+    <section class="racha" aria-live="polite">
+      <div class="sello" id="sello">
+        <span class="sello-numero" id="rachaNumero">0</span>
+        <span class="sello-texto" id="rachaTexto">días de racha</span>
+      </div>
     </section>
 
     <section class="semana">
-      <div class="semana-numero" id="semanaMinutos">0</div>
-      <div class="semana-texto">minutos esta semana</div>
+      <strong id="semanaMinutos">0</strong>
+      <span>minutos esta semana</span>
     </section>
 
     <form id="formulario" class="formulario">

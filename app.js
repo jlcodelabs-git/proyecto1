@@ -140,7 +140,7 @@ const toggleTema = document.getElementById("toggleTema");
 
 function aplicarTema(oscuro) {
   document.body.classList.toggle("oscuro", oscuro);
-  toggleTema.textContent = oscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+  toggleTema.textContent = oscuro ? "Modo claro" : "Modo oscuro";
 }
 
 let temaOscuro = localStorage.getItem(CLAVE_TEMA) === "oscuro";
