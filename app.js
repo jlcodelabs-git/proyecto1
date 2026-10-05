@@ -47,12 +47,29 @@ function formatearFecha(texto) {
   });
 }
 
+// Suma los minutos de las sesiones de esta semana (lunes a hoy, fecha local).
+function calcularMinutosSemana() {
+  const hoy = new Date();
+  const diaSemana = (hoy.getDay() + 6) % 7; // lunes = 0
+  const lunes = new Date(hoy);
+  lunes.setDate(hoy.getDate() - diaSemana);
+
+  const inicio = fechaLocal(lunes);
+  const fin = fechaLocal(hoy);
+
+  return sesiones
+    .filter((s) => s.fecha >= inicio && s.fecha <= fin)
+    .reduce((total, s) => total + s.minutos, 0);
+}
+
 // Dibuja la racha y la lista de sesiones en pantalla.
 function mostrar() {
   const racha = calcularRacha();
   document.getElementById("rachaNumero").textContent = racha;
   document.getElementById("rachaTexto").textContent =
     racha === 1 ? "día de racha" : "días de racha";
+
+  document.getElementById("semanaMinutos").textContent = calcularMinutosSemana();
 
   const lista = document.getElementById("listaSesiones");
   lista.innerHTML = "";

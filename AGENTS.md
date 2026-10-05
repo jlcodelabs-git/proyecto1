@@ -13,6 +13,7 @@ Static web app "Diario de Estudio" — session tracker with study streak.
 ## Domain rules (easy to get wrong)
 - Session = `{ id, fecha: "YYYY-MM-DD", tema, minutos }`; minutos must be > 0.
 - Streak = consecutive days with ≥1 session ending today; if today has none, it still counts if yesterday has one (streak stays alive until the day ends).
+- Semana = lunes a hoy (semana en curso, lunes = día 1 ISO); los minutos semanales se suman solo en ese rango y en minutos, no en horas.
 - Always use local dates (`fechaLocal()` helper), never `toISOString()`/UTC.
 - Persistence via localStorage key `diarioDeEstudio`; changing the key orphans existing user data.
 
