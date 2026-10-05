@@ -7,6 +7,7 @@ aporte.
   sesiones.
 - Modo oscuro con botón toggle (persiste en localStorage, clase `oscuro` en body).
 - Total de minutos estudiados esta semana, visible bajo la racha.
+- Config ajena al proyecto: el shell fish ahora usa Starship (instalado en `~/.local/bin`, init en `~/.config/fish/config.fish`); prompt antiguo en `~/.config/fish/fish_prompt.fish.bak`.
 
 ## Decisiones (y por qué)
 - Sin backend ni dependencias: cualquiera debe poder abrirlo con doble clic.
