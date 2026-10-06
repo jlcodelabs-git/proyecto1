@@ -1,6 +1,15 @@
 // Datos: leemos las sesiones guardadas o empezamos con una lista vacía.
 const CLAVE = "diarioDeEstudio";
-let sesiones = JSON.parse(localStorage.getItem(CLAVE)) || [];
+let sesiones = [];
+try {
+  sesiones = JSON.parse(localStorage.getItem(CLAVE)) || [];
+} catch {
+  // Si el dato guardado está corrupto, empezamos de cero en lugar de romper la app.
+  sesiones = [];
+}
+if (!Array.isArray(sesiones)) {
+  sesiones = [];
+}
 
 // Guarda las sesiones en el navegador para no perderlas al recargar.
 function guardar() {

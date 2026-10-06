@@ -30,3 +30,18 @@ aporte.
   consola limpia.
 - Scripts git en `~/.local/bin/` (`git-up`, `git-up.bat`): add+commit+push con mensaje
   interactivo. Van fuera del proyecto: AGENTS.md fija exactamente 3 archivos.
+
+### Template de proyecto
+- Movido a `/home/ubuntu/code/template/`. Incluye ahora `.opencode/commands/`
+  (los `/`), `.agents/skills/` (sdd, local-date) y `OPENCODE.md` con la guía de
+  comandos `/` y referencias `@`.
+
+## Revisión de subdirectorios (2026-10-05)
+- Skills movidas a su sitio: `local-date/SKILL.md` → `.agents/skills/local-date/`, y el
+  contenido SDD de `.agents/skills/SKILLS.md` → `.agents/skills/sdd/SKILL.md`.
+- Comandos: `feature.md` tenía `agent: pl` (→ `plan`) y líneas en blanco al inicio;
+  `sdd-implement.md` tenía la description partida y rompía el frontmatter (corregido);
+  `review.md` estaba vacío → ahora revisa contra AGENTS.md/constitution.
+- `opencode.json`: la API key de Context7 era un placeholder literal → ahora
+  `{env:CONTEXT7_API_KEY}`; hay que exportar esa variable para que funcione.
+- `app.js`: carga de localStorage con try/catch (dato corrupto ya no rompe la app).

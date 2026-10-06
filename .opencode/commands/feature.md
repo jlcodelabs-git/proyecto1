@@ -1,9 +1,6 @@
-
-
-
 ---
 description: Planifica una nueva funcionalidad antes de tocar código
-agent: pl
+agent: plan
 ---
 
 Quiero añadir esta funcionalidad: $ARGUMENTS
