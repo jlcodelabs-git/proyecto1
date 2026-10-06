@@ -45,3 +45,5 @@ aporte.
 - `opencode.json`: la API key de Context7 era un placeholder literal → ahora
   `{env:CONTEXT7_API_KEY}`; hay que exportar esa variable para que funcione.
 - `app.js`: carga de localStorage con try/catch (dato corrupto ya no rompe la app).
+- Estructura de directorios exportada para impresión:
+  `/home/ubuntu/code/estructura-directorios.html` y `.pdf` (2026-10-06).

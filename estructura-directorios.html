@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Estructura de directorios</title>
+<style>
+  @page { margin: 1.5cm; size: A4; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #000;
+    background: #fff;
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 0 16px;
+    line-height: 1.4;
+  }
+  h1 { font-size: 20px; border-bottom: 2px solid #000; padding-bottom: 4px; }
+  h2 { font-size: 14px; margin-top: 20px; }
+  pre {
+    font-family: "Courier New", monospace;
+    font-size: 10.5px;
+    line-height: 1.3;
+    white-space: pre;
+    border: 1px solid #999;
+    padding: 12px;
+    page-break-inside: avoid;
+  }
+  ul { font-size: 12px; }
+  @media print {
+    body { margin: 0; padding: 0; max-width: none; }
+    pre { border: 1px solid #000; }
+  }
+</style>
+</head>
+<body>
+<h1>Estructura de directorios — /home/ubuntu/code</h1>
+<p><em>Fecha: martes 6 de octubre de 2026</em></p>
+
+<pre>
+/home/ubuntu/code/
+│
+├── proyecto1/                        # App "Diario de Estudio"
+│   ├── index.html                    # entrada (doble clic, sin build)
+│   ├── styles.css                    # estilos (claro/oscuro)
+│   ├── app.js                        # lógica y persistencia
+│   ├── AGENTS.md                     # reglas del proyecto
+│   ├── MEMORY.md                     # memoria entre sesiones
+│   ├── opencode.json                 # MCPs (chrome-devtools, context7)
+│   ├── skills-lock.json              # versionado de skills
+│   │
+│   ├── .opencode/
+│   │   └── commands/                 # comandos / del prompt
+│   │       ├── feature.md
+│   │       ├── review.md
+│   │       └── sdd-*.md              # constitution, spec, clarify, plan,
+│   │                                 # tasks, implement, validate, change, status
+│   │
+│   └── .agents/
+│       └── skills/
+│           ├── frontend-design/
+│           ├── local-date/
+│           └── sdd/
+│
+└── template/                         # Plantilla para futuros proyectos
+    ├── README.md
+    ├── OPENCODE.md                   # guía de / y @
+    ├── AGENTS.md
+    ├── MEMORY.md
+    │
+    ├── docs/
+    │   └── constitution.md
+    │
+    ├── specs/
+    │   └── 001-nombre-funcionalidad/
+    │       ├── spec.md
+    │       ├── plan.md
+    │       └── tasks.md
+    │
+    ├── .opencode/
+    │   └── commands/                 # mismos comandos /
+    │
+    └── .agents/
+        └── skills/
+            ├── local-date/
+            └── sdd/
+</pre>
+
+<h2>Puntos clave</h2>
+<ul>
+  <li><strong>proyecto1</strong>: app de 3 archivos; lo demás es tooling (OpenCode, skills, memoria).</li>
+  <li><strong>template</strong>: espejo sin la app; copiar con <code>cp -r /home/ubuntu/code/template/ /nuevo-proyecto/</code>.</li>
+  <li>Comandos <code>/</code> en <code>.opencode/commands/</code>; skills en <code>.agents/skills/</code>; flujo SDD en <code>docs/constitution.md</code> + <code>specs/NNN-nombre/</code>.</li>
+</ul>
+</body>
+</html>
